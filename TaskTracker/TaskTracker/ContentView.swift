@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var navigateToAddTask: Bool = false
+    
     var body: some View {
-        VStack {
-            Button("Add Task") {
-                addTask()
+        NavigationStack {
+            VStack {
+                Button("Add Task") {
+                    navigateToAddTask = true
+                }
+                .frame(width: 200)
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(6)
+                .foregroundColor(.white)
+                
             }
             .padding()
-            .background(Color.blue)
-            .cornerRadius(6)
-            .foregroundColor(.white)
-            
+            .navigationDestination(isPresented: $navigateToAddTask) {
+                AddTaskView()
+            }
         }
-        .padding()
-    }
-    
-    func addTask() {
-        print("Add Task")
     }
 }
 
