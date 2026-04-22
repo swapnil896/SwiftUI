@@ -36,6 +36,7 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if !taskList.isEmpty {
                         Button("Add Task") {
+                            mode = .add
                             navigateToAddTask = true
                         }
                     }

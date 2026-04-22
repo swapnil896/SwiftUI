@@ -86,22 +86,21 @@ struct AddTaskView: View {
     }
     
     func saveTask() {
-        if title.isEmpty {
-            // show alert
-            return
-        }
+        print(mode)
         switch mode {
         case .add:
+            if title.isEmpty { return }
             let newTask = TaskModel(title: title, description: description)
             taskList.append(newTask)
         case .edit:
-            if var task = selectedTask {
-                task.title = title
-                task.description = description
-                if let index = taskList.firstIndex(where: { $0.id == task.id }) {
-                    taskList[index] = task
-                    selectedTask = task
-                }
+            print("Saved in Edit Mode")
+            guard let editedTitle = selectedTask?.title, !editedTitle.isEmpty else { return }
+            
+            if let index = taskList.firstIndex(where: { $0.id == selectedTask?.id }) {
+                taskList[index].title = editedTitle
+                taskList[index].description = selectedTask?.description ?? ""
+                
+                print(taskList)
             }
         }
     }
