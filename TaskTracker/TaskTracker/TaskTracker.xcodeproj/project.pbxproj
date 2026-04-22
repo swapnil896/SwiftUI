@@ -8,7 +8,6 @@
 
 /* Begin PBXFileReference section */
 		7D387AE42F9210820092A43E /* TaskTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D387B052F98ACBB0092A43E /* TaskTracker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TaskTracker.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -42,13 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				7D387AE42F9210820092A43E /* TaskTracker.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7D387B062F98ACBB0092A43E /* Products */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,12 +97,6 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7D387AE52F9210820092A43E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7D387B062F98ACBB0092A43E /* Products */;
-					ProjectRef = 7D387B052F98ACBB0092A43E /* TaskTracker.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				7D387AE32F9210820092A43E /* TaskTracker */,
